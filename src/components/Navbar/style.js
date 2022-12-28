@@ -1,15 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-
-export const BounceAnimation = keyframes`
-  to {
-    transform: translateY(0);
-  }
-
-  50% { 
-    opacity: 1;;
-  }
-
-`;
+import styled from 'styled-components';
 
 export const NavbarStyles = styled.nav`
   display: flex;
@@ -26,5 +15,13 @@ export const NavbarStyles = styled.nav`
   -webkit-transform: translateY(-1000px);
   opacity: 0;
   transition: 0.5s ease-in-out;
-  animation: ${(props) => props.toggled && BounceAnimation} 1s step-start;
+  /* animation: ${(props) => props.toggled} 1s calc(); */
+
+  &:nth-child(1) {
+    transform: ${({ toggled }) => toggled && 'rotate(0)'};
+  }
+  &:nth-child(2) {
+    transform: ${({ toggled }) => toggled && 'translateX(0)'};
+    opacity: ${({ toggled }) => toggled && 1};
+  }
 `;
