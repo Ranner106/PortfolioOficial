@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
-import { AboutContainer, AboutSection } from './style';
+import {
+  AboutContainer,
+  AboutSection,
+  SkillsSection,
+  SkillContainer,
+} from './style';
+import { skills } from './data';
 import { about } from '../../images';
 
 function About() {
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [innerHeight, setInnerHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    function handleResize() {
+      setInnerWidth(window.innerWidth);
+      setInnerHeight(window.innerHeight);
+    }
+
+    // Monitore o scroll da janela e atualize setScrollY no estado
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [innerWidth, innerHeight]);
   return (
     <AboutContainer>
       <AboutSection
@@ -64,6 +86,35 @@ function About() {
           </div>
         </div>
       </AboutSection>
+
+      <SkillsSection
+        initial={{ x: 300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: false }}
+      >
+        <h1 className="skills">Skills</h1>
+        <div className="line" />
+        <div className="skills-container">
+          {skills.map(({ name, svg, color }, index) => (
+            <SkillContainer
+              initial={{ opacity: 0, y: -70 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: innerWidth > 1200 ? index * 0.1 : Math.random() - 0.5,
+                  bounce: 0.5,
+                },
+              }}
+              key={name}
+              color={color}
+            >
+              {svg}
+              <p>{name}</p>
+            </SkillContainer>
+          ))}
+        </div>
+      </SkillsSection>
     </AboutContainer>
   );
 }
