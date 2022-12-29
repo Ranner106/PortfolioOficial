@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { titleColor, textColor } from '../../config/colors';
 
 export const NavbarStyles = styled.nav`
   display: flex;
@@ -15,6 +16,8 @@ export const NavbarStyles = styled.nav`
   -webkit-transform: translateY(-1000px);
   opacity: 0;
   transition: 0.5s ease-in-out;
+  background-color: ${({ toggled }) => toggled && '#2D033B'};
+  transform-origin: 1px;
   /* animation: ${(props) => props.toggled} 1s calc(); */
 
   &:nth-child(1) {
@@ -23,5 +26,20 @@ export const NavbarStyles = styled.nav`
   &:nth-child(2) {
     transform: ${({ toggled }) => toggled && 'translateX(0)'};
     opacity: ${({ toggled }) => toggled && 1};
+  }
+
+  li {
+    text-align: center;
+    a {
+      text-decoration: none;
+      font-size: 40px;
+      font-weight: 500;
+      transition: 0.5s ease-in-out;
+      scroll-behavior: smooth;
+      color: ${textColor};
+      &:hover {
+        color: ${titleColor};
+      }
+    }
   }
 `;

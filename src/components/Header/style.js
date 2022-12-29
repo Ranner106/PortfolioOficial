@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { designColor, titleColor } from '../../config/colors';
 
 export const HeaderContainer = styled(motion.header)`
   display: flex;
@@ -12,4 +13,12 @@ export const HeaderContainer = styled(motion.header)`
   width: 100%;
   position: fixed;
   z-index: 2;
+
+  .burger-icon {
+    color: ${designColor};
+    &:hover {
+      cursor: pointer;
+      fill: ${titleColor};
+    }
+  }
 `;
