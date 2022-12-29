@@ -92,6 +92,10 @@ export const SkillsSection = styled(motion.section)`
     height: 4px;
     margin: 4rem 0;
   }
+  .skills {
+    color: ${titleColor};
+  }
+
   .skills-container {
     display: flex;
     flex-flow: row wrap;
@@ -110,10 +114,6 @@ export const SkillContainer = styled(motion.div)`
   margin: 20px 0;
   background: transparent;
   transition: 0.2s ease-in-out !important;
-
-  .skills {
-    color: ${titleColor};
-  }
 
   .skill-icon {
     width: 40px;
