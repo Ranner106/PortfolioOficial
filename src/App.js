@@ -1,15 +1,17 @@
 import React from 'react';
 import About from './components/About/About';
 import Header from './components/Header/Header';
+import ProjectMain from './components/Projects/ProjectMain/ProjectMain';
 import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
   return (
-    <h1>
+    <div>
+      <GlobalStyles />
       <Header />
       <About />
-      <GlobalStyles />
-    </h1>
+      <ProjectMain />
+    </div>
   );
 }
 
