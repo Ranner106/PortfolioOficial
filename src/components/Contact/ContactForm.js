@@ -34,34 +34,6 @@ function ContactForm() {
       <div className="purple-line" />
 
       <ContactDivs>
-        <ContactTextsContainer>
-          <p>
-            Eu estou <span>aberta a trabalho</span> e a novos projetos. Entre em
-            contato comigo pelo formulário ao lado ou me envie um email:
-          </p>
-          <p>
-            <a href="mailto:rannerdepaula@gmail.com">rannerdepaula@gmail.com</a>
-          </p>
-          <p>Visite minhas redes sociais:</p>
-          <div className="social-icons-container">
-            <a
-              href="https://github.com/Ranner106"
-              id="github-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SiGithub className="social-icon github" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ranner-de-paula-7a902b232/"
-              id="linkedin-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SiLinkedin className="social-icon linkedin" />
-            </a>
-          </div>
-        </ContactTextsContainer>
         <form
           style={{
             display: 'flex',
@@ -167,6 +139,34 @@ function ContactForm() {
             Enviar
           </button>
         </form>
+        <ContactTextsContainer>
+          <p>
+            Eu estou <span>aberta a trabalho</span> e a novos projetos. Entre em
+            contato comigo pelo formulário ou me envie um email:
+          </p>
+          <p>
+            <a href="mailto:rannerdepaula@gmail.com">rannerdepaula@gmail.com</a>
+          </p>
+          <p>Visite minhas redes sociais:</p>
+          <div className="social-icons-container">
+            <a
+              href="https://github.com/Ranner106"
+              id="github-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SiGithub className="social-icon github" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ranner-de-paula-7a902b232/"
+              id="linkedin-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SiLinkedin className="social-icon linkedin" />
+            </a>
+          </div>
+        </ContactTextsContainer>
       </ContactDivs>
     </ContactContainer>
   );

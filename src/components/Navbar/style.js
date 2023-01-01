@@ -46,4 +46,10 @@ export const NavbarStyles = styled.nav`
       }
     }
   }
+
+  @media screen and (min-width: 800px) {
+    ul li a {
+      font-size: 40px;
+    }
+  }
 `;

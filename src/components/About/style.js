@@ -75,6 +75,33 @@ export const AboutSection = styled(motion.section)`
   .myname {
     color: ${titleColor};
   }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: row;
+    .logo {
+      display: none;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+
+    .description {
+      width: 70%;
+      h1 {
+        font-size: 60px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 23px;
+      }
+    }
+  }
 `;
 
 export const SkillsSection = styled(motion.section)`

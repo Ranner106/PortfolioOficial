@@ -52,7 +52,12 @@ function About() {
           <h2 id="About">Back-End Developer</h2>
           <div className="line" />
           <div className="aboutMe">
-            <img src={about} alt="Ranner de Paula Logo" width={500} />
+            <img
+              className="logo"
+              src={about}
+              alt="Ranner de Paula Logo"
+              width={500}
+            />
 
             <div className="text">
               <p>
