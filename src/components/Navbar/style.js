@@ -28,17 +28,21 @@ export const NavbarStyles = styled.nav`
     opacity: ${({ toggled }) => toggled && 1};
   }
 
-  li {
-    text-align: center;
-    a {
-      text-decoration: none;
-      font-size: 40px;
-      font-weight: 500;
-      transition: 0.5s ease-in-out;
-      scroll-behavior: smooth;
-      color: ${textColor};
-      &:hover {
-        color: ${titleColor};
+  ul {
+    list-style: none;
+
+    li {
+      text-align: center;
+      a {
+        text-decoration: none;
+        font-size: 40px;
+        font-weight: 500;
+        transition: 0.5s ease-in-out;
+        scroll-behavior: smooth;
+        color: ${textColor};
+        &:hover {
+          color: ${titleColor};
+        }
       }
     }
   }
