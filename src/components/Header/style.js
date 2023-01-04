@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { designColor, titleColor } from '../../config/colors';
+import { designColor, titleColor, backgroundColor } from '../../config/colors';
 
 export const HeaderContainer = styled(motion.header)`
   display: flex;
@@ -19,6 +19,24 @@ export const HeaderContainer = styled(motion.header)`
     &:hover {
       cursor: pointer;
       fill: ${titleColor};
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    background-color: ${designColor};
+    height: 150px;
+
+    .image-content {
+      margin-top: 60px;
+    }
+
+    img {
+      width: 120px;
+    }
+
+    .burger-icon {
+      color: ${backgroundColor};
+      margin-top: 60px;
     }
   }
 `;

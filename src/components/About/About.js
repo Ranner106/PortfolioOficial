@@ -27,7 +27,7 @@ function About() {
     };
   }, [innerWidth, innerHeight]);
   return (
-    <AboutContainer>
+    <AboutContainer id="top">
       <AboutSection
         initial={{ x: -300, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -61,24 +61,24 @@ function About() {
 
             <div className="text">
               <p>
-                <span className="myname">Olá, eu sou Ranner de paula!</span> uma
+                Olá, eu sou <span className="myname">Ranner de Paula!</span> uma
                 desenvolvedora Backend nascida em Rio de Janeiro.
               </p>
               <p>
-                Desde que tive contato com uma matéria chamada Sistema de
+                Desde que tive contato com uma matéria chamada Sistema da
                 informação na faculdade me apaixonei completamente pelo mundo da
                 tecnologia.
               </p>
               <p>
-                Começei a assitir aos cursos do Professor Guanabara pelo
+                Comecei a assitir aos cursos do Professor Guanabara pelo
                 Youtube, e começei a entender e praticar algumas linguagens de
                 programação. Também ingressei em um curso especializado para o
                 Aprendizado.
               </p>
               <p>
                 Atualmente, faço alguns trabalhos freelancers de desenvolvimento
-                de API para algumas empresas e me arrisco também no Front-end
-                para melhorar o conhecimento.
+                de API para algumas empresas tanto na parte de Front-end, mas
+                principalmente na parte de Backend.
               </p>
               <p>
                 caso esteja interessado, contate-me, será um imenso prazer.
